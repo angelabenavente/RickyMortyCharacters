@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const CharactersList = props => {
 
   return (
-    <div>
-      <ul>
+    <div className="charactersListWrapper">
+      <ul className="characterList">
       {props.allCharacters
         .filter(character => props.inputValue === '' || character.name.toLowerCase().includes(props.inputValue.toLowerCase()))
         .map((character,index) =>  <li className="character-wrapper" key={character.id}>

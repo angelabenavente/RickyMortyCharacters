@@ -1,4 +1,5 @@
 import React from 'react';
+import headerImage from '../images/headerImage.png'
 
 const CharacterFilter = props => {
 
@@ -7,9 +8,14 @@ const CharacterFilter = props => {
     props.onChangeHandler(event.target.value);
   }
   
-  return <form value={props.inputValue} className="filter-wrapper">
+  return (
+  <header className="header">
+    <img className="headerImage" src={headerImage} alt="Rick and Morty logo"></img>
+    <form value={props.inputValue} className="filter-wrapper">
     <input onChange={onChangeHandler} type='text' value={props.inputValue}></input>
     </form>
+    </header>
+  )
 }
 
 export default CharacterFilter;
