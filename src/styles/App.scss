@@ -1,4 +1,5 @@
 @import 'core/_mixins.scss';
+@import 'vendors/_normalize';
 
 * {
   margin: 0 auto;
@@ -55,8 +56,8 @@ body {
 .character-wrapper {
   background-color: #47b5cc;
   box-shadow: 6px 6px 14px -9px #9dff0a;
-  width: 220px;
-  height: 290px;
+  width: 228px;
+  height: 330px;
   margin-bottom: 8%;
   margin-left: 8%;
   margin-left: auto;
@@ -83,9 +84,14 @@ body {
 }
 
 .characterImage {
-  width: 220px;
+  width: 228px;
 }
-
+.characterDescription{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
 .characterName {
 color: white;
 text-decoration: none;
