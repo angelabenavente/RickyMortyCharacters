@@ -1,9 +1,8 @@
 import React from 'react';
 import Character from './Character';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CharactersList = props => {
-  console.log(props);
 
   return (
     <div>

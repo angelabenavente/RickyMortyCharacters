@@ -17,6 +17,7 @@ class App extends React.Component {
     this.onChangeHandler = this.onChangeHandler.bind(this);
     this.characterId = this.characterId.bind(this);
     this.fetchCharacterId = this.fetchCharacterId.bind(this);
+    this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
   }
 
   componentDidMount(){
@@ -24,34 +25,32 @@ class App extends React.Component {
         .then(data => {
           this.setState({
             allCharacters: data.results,
-            singleCharacter: {},
             value: ''
           });
-          console.log(this.state.allCharacters);
         });
     }
 
 
 
     characterId(id){
-      console.log(id);
+      console.log(this.state.singleCharacter);
     }
 
-    //cargo receta seleccionada
+
     fetchCharacterId(id){
       if(id !== this.state.singleCharacter.id) {
         fetchCharacterId(id)
         .then(data => 
           this.setState({
-            singleCharacter: data.results[0]
+            singleCharacter: data[0]
           })
         )
       }
     }
 
     renderCharacterDetails(props){
-      console.log(props)
-      this.fetchCharacterId(props.match.params.id)
+      console.log(this.state.singleCharacter)
+      //this.fetchCharacterId(props.match.params.id)
       return <CharacterDetails character={this.state.singleCharacter} />;
     }
 
@@ -59,12 +58,11 @@ class App extends React.Component {
       this.setState({
         value: inputValue
       });
-      console.log(this.state.value);
     }
 
 
   render() {
-    console.log(this.state.value)
+    console.log(this.state.singleCharacter);
     return (
       <div className="App">
         <ul>
@@ -77,9 +75,7 @@ class App extends React.Component {
           <CharacterFilter onChangeHandler={this.onChangeHandler} inputValue={this.state.value}/>
           <CharactersList allCharacters = {this.state.allCharacters} inputValue={this.state.value}/>
           </Route>
-          <Route path="/character/:id">
-             <CharacterDetails/>
-          </Route>
+          <Route path="/character/:id" render={this.renderCharacterDetails}></Route>
       </Switch>
      </div>
     );}
