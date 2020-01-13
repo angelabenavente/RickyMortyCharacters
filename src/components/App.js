@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/App.scss';
-import { fetchCharacters, fetchCharacterId } from '../services/Api';
+import { fetchCharacters} from '../services/Api';
+import { fetchCharacterId } from '../services/Api';
 import CharactersList from './CharactersList';
 import CharacterFilter from './CharacterFilter';
 import CharacterDetails from './CharacterDetails';
@@ -11,7 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       allCharacters: [],
-      singleCharacter: {},
+      singleCharacter: 'hola',
       value: '',
     }
     this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -39,18 +40,19 @@ class App extends React.Component {
 
     fetchCharacterId(id){
       if(id !== this.state.singleCharacter.id) {
+        console.log(id)
         fetchCharacterId(id)
         .then(data => 
           this.setState({
-            singleCharacter: data[0]
+            singleCharacter: data,
           })
         )
       }
     }
 
     renderCharacterDetails(props){
-      console.log(this.state.singleCharacter)
-      //this.fetchCharacterId(props.match.params.id)
+
+      this.fetchCharacterId(props.match.params.id)
       return <CharacterDetails character={this.state.singleCharacter} />;
     }
 
@@ -65,11 +67,7 @@ class App extends React.Component {
     console.log(this.state.singleCharacter);
     return (
       <div className="App">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
+       
        <Switch>
           <Route path="/" exact>
           <CharacterFilter onChangeHandler={this.onChangeHandler} inputValue={this.state.value}/>
