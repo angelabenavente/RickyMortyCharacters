@@ -12,7 +12,7 @@ const CharacterFilter = props => {
   <header className="header">
     <img className="headerImage" src={headerImage} alt="Rick and Morty logo"></img>
     <form value={props.inputValue} className="filter-wrapper">
-    <input onChange={onChangeHandler} type='text' value={props.inputValue}></input>
+    <input className="search-characters" onChange={onChangeHandler} type='text' value={props.inputValue}></input>
     </form>
     </header>
   )

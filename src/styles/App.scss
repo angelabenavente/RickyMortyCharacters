@@ -23,12 +23,24 @@ body {
 .headerImage{
   width: 400px;
 }
+
+.search-characters {
+  border: 2px solid #00b4cc;
+  color: #fff;
+  margin-top: 35px;
+  background-color: #000;
+  width: 38vw;
+  padding: 7px;
+  height: 35px;
+
+}
 .charactersListWrapper{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
 }
 .characterList{
   display: flex;
@@ -42,11 +54,16 @@ body {
 
 .character-wrapper {
   background-color: #47b5cc;
+  box-shadow: 6px 6px 14px -9px #9dff0a;
   width: 220px;
+  height: 290px;
   margin-bottom: 8%;
   margin-left: 8%;
   margin-left: auto;
   margin-right: auto;
+  color: white;
+  text-align: center;
+  list-style-type: none;
   @include mobileMedium{
     margin-bottom: 6%;
     margin-left: 6%;
@@ -67,6 +84,22 @@ body {
 
 .characterImage {
   width: 220px;
+}
+
+.characterName {
+color: white;
+text-decoration: none;
+margin-top: 10px;
+font-size: 18px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.characterSpecie {
+  color: white;
+  font-size: 18px;
 }
 .specieIcon {
   width: 40px;
