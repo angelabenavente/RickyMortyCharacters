@@ -13,18 +13,21 @@ const CharacterDetails = props => {
   return (
     <React.Fragment>
       <Header/>
-  <div className="character-details-wrapper">
-     <ul>
-          <li>
+      <ul>
+          <li className="linkToHome">
             <Link to="/"><i class="fas fa-angle-left"></i> Volver</Link>
           </li>
         </ul>
-    <img src={image} alt={name}></img>
+  <div className="character-details-wrapper">
+
+    <img className="detailImage" src={image} alt={name}></img>
+    <div className="detailsDescription">
     <h1>{name}</h1>
-    <p>Status: {(status !== 'Dead') ? '' : <i className="fas fa-skull-crossbones"></i>} {status} </p>
-    <p>Species: {(species === 'Humanoid') ? <img className="specieIcon" src={humanoidIcon}/> : (species === 'Alien') ? <img className="specieIcon" src={alienIcon}/> : <img className="specieIcon" src={humanIcon}/>} {species} </p>
-    <p>{episode}</p>
+  <p>Status:  {status}  {(status === 'Dead') ? <i className="detailIcon fas fa-skull-crossbones"></i> : (status === 'Alive') ?  <i class="detailIcon fas fa-thumbs-up"></i> : ''} </p>
+    <p>Species: {species} {(species === 'Humanoid') ? <img className="detailIcon" src={humanoidIcon}/> : (species === 'Alien') ? <img className="detailIcon" src={alienIcon}/> : <i class="detailIcon fas fa-user-alt"></i>}  </p>
+    {/* <p>{episode.length}</p> */} 
     {/* <p>{{origin}.name}</p> */}
+    </div>
     </div>
     </React.Fragment>
   )
