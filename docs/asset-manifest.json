@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.63a493b9.chunk.css",
+    "main.js": "./static/js/main.9876d5d8.chunk.js",
+    "main.js.map": "./static/js/main.9876d5d8.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.b8ce57fa.js",
+    "runtime-main.js.map": "./static/js/runtime-main.b8ce57fa.js.map",
+    "static/js/2.a952a64e.chunk.js": "./static/js/2.a952a64e.chunk.js",
+    "static/js/2.a952a64e.chunk.js.map": "./static/js/2.a952a64e.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.b1da102a23c7b5fae2e470a49c51d9e9.js": "./precache-manifest.b1da102a23c7b5fae2e470a49c51d9e9.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.63a493b9.chunk.css.map": "./static/css/main.63a493b9.chunk.css.map",
+    "static/js/2.a952a64e.chunk.js.LICENSE": "./static/js/2.a952a64e.chunk.js.LICENSE",
+    "static/media/alien.svg": "./static/media/alien.c8624379.svg",
+    "static/media/headerImage.png": "./static/media/headerImage.75509f2e.png",
+    "static/media/humanoide.svg": "./static/media/humanoide.585b8a4c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8ce57fa.js",
+    "static/js/2.a952a64e.chunk.js",
+    "static/css/main.63a493b9.chunk.css",
+    "static/js/main.9876d5d8.chunk.js"
+  ]
+}
