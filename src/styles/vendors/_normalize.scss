@@ -352,6 +352,10 @@ template {
   box-sizing: border-box;
   text-decoration: none;
 }
+h3, p {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
 
 ul {
   margin: 0;

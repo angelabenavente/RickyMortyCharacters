@@ -30,9 +30,9 @@ class CharacterFilter extends React.Component {
     return (
       <React.Fragment>
         <Header/>
-        <form value={this.props.inputValue} className="filter-wrapper">
+        <form value={this.props.inputValue} className="filterWrapper">
           <input
-            className="search-characters"
+            className="filterWrapper__searchInput"
             type='text'
             value={this.props.inputValue}
             placeholder={this.state.placeholder} 

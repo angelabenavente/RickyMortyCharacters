@@ -30,10 +30,8 @@ class App extends React.Component {
     });
   }
 
-
   fetchCharacterId(id){
     if(id !== this.state.singleCharacter.id) {
-      console.log(id)
       fetchCharacterId(id)
       .then(data => 
         this.setState({

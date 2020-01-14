@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const CharactersList = props => {
   return (
-    <div className="charactersListWrapper">
-      <ul className="characterList">
+    <div className="charactersWrapper">
+      <ul className="charactersWrapper__list">
         {props.allCharacters
           .filter(character => props.inputValue === '' || character.name.toLowerCase().includes(props.inputValue.toLowerCase()))
           .map((character) =>
-          <li className="character-wrapper" key={character.id}>
+          <li className="charactersWrapper__list__item" key={character.id}>
             <Link to={`/character/${character.id}`}>
               <Character
                 characterId={props.characterId}
