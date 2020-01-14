@@ -12,6 +12,7 @@ body {
   font-family: "Roboto Slab", serif;
   background: black;
   padding: 35px;
+  padding-bottom: 50px;
   margin: auto;
   width: 100vw;
 }
@@ -31,6 +32,7 @@ body {
   color: #fff;
   margin-top: 35px;
   background-color: #000;
+  min-width: 300px;
   width: 38vw;
   padding: 7px;
   height: 35px;
@@ -46,7 +48,7 @@ body {
 }
 .characterList{
   
-  margin-top: 20;
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -104,7 +106,7 @@ body {
 
 .character-wrapper {
   background-color: #47b5cc;
-  box-shadow: 6px 6px 14px -9px #9dff0a;
+  box-shadow: 7px 7px 15px -9px #c545f8;
   width: 220px;
   height: 330px;
   margin-bottom: 8%;
@@ -114,6 +116,10 @@ body {
   color: white;
   text-align: center;
   list-style-type: none;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 7px 7px 15px -9px #9dff0a;
+  }
   
   @include mobileMedium{
     margin-bottom: 6%;
