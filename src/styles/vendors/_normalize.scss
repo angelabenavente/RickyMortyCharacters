@@ -11,7 +11,6 @@
  html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-size: 100%; /* 100% = 16px */
 }
 
 /* Sections
@@ -75,8 +74,7 @@ pre {
  */
 
 a {
-  
-  text-decoration: none;
+  background-color: transparent;
 }
 
 /**
@@ -245,6 +243,7 @@ legend {
   display: table; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -349,47 +348,13 @@ template {
   display: none;
 }
 
-ul {
-  list-style:none;
-  padding:0;
-  margin:0;}
-li {
-  display: block;
-}
-
 *{
   box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-
-*{
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-li {
-  list-style: none;
-}
-
-a {
   text-decoration: none;
-  color: white;
-  &:hover {
-    color: orange
-  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
