@@ -13,6 +13,7 @@ body {
   background: black;
   padding: 35px;
   padding-bottom: 50px;
+  padding-top: 50px;
   margin: auto;
   width: 100vw;
 }
@@ -21,21 +22,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 .headerImage{
   width: 400px;
 }
 
+.filter-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .search-characters {
   border: 2px solid #00b4cc;
   color: #fff;
-  margin-top: 35px;
   background-color: #000;
   min-width: 300px;
   width: 38vw;
   padding: 7px;
   height: 35px;
+  margin: auto;
 
 }
 .charactersListWrapper{
@@ -166,4 +173,11 @@ a{
 .specieIcon {
   width: 40px;
   height: 40px;
+}
+
+//////////////////////
+.character-details-wrapper {
+background-color: #47b5cc;
+    width: 60%;
+    margin-top: 65px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Header from './Header';
 import { Link, Route, Switch } from 'react-router-dom';
 import humanIcon from '../images/human.svg'
 import humanoidIcon from '../images/humanoide.svg'
@@ -9,7 +10,10 @@ const CharacterDetails = props => {
   const { image, name, species, origin, episode, status } = props.character;
   console.log(props)
 
-  return <div className="character-details-wrapper">
+  return (
+    <React.Fragment>
+      <Header/>
+  <div className="character-details-wrapper">
      <ul>
           <li>
             <Link to="/"><i class="fas fa-angle-left"></i> Volver</Link>
@@ -22,6 +26,8 @@ const CharacterDetails = props => {
     <p>{episode}</p>
     {/* <p>{{origin}.name}</p> */}
     </div>
+    </React.Fragment>
+  )
 }
 
 export default CharacterDetails;

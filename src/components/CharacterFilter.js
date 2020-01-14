@@ -1,5 +1,6 @@
 import React from 'react';
-import headerImage from '../images/headerImage.png'
+import Header from './Header';
+
 
 const CharacterFilter = props => {
 
@@ -9,12 +10,12 @@ const CharacterFilter = props => {
   }
   
   return (
-  <header className="header">
-    <img className="headerImage" src={headerImage} alt="Rick and Morty logo"></img>
-    <form value={props.inputValue} className="filter-wrapper">
-    <input className="search-characters" onChange={onChangeHandler} type='text' value={props.inputValue}></input>
-    </form>
-    </header>
+    <React.Fragment>
+      <Header/>
+      <form value={props.inputValue} className="filter-wrapper">
+        <input className="search-characters" onChange={onChangeHandler} type='text' value={props.inputValue}></input>
+      </form>
+    </React.Fragment>
   )
 }
 
